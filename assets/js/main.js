@@ -468,7 +468,7 @@
                         $('#contactForm textarea[name=message]').val('');
                     },
                     error: function (data) {
-                        alert("Error occurd! Please try again");
+                        alert("Am intampinat o eroare. Te rugam sa reincerci mai tarziu.");
                     }
                 });
 
@@ -480,7 +480,7 @@
         /*===============================================================
          Working Request A Call Form
          ================================================================*/
-
+        //programari
         $("#requestACall").submit(function (e) {
 
             e.preventDefault();
@@ -508,7 +508,7 @@
                         $('#requestACall textarea[name=phone]').val('');
                     },
                     error: function (data) {
-                        alert("Error occurd! Please try again");
+                        alert("Am intampinat o eroare. Te rugam sa reincerci mai tarziu.");
                     }
                 });
 
@@ -549,7 +549,7 @@
                         $('#reservationForm textarea[name=email]').val('');
                     },
                     error: function (data) {
-                        alert("Error occurd! Please try again");
+                        alert("Am intampinat o eroare. Te rugam sa reincerci mai tarziu.");
                     }
                 });
 
@@ -604,8 +604,8 @@
         // When the window has finished loading create our google map below
         google.maps.event.addDomListener(window, 'load', init);
 
-        var mkr = new google.maps.LatLng(46.7834818,23.5464729);
-        var cntr = (mobileTest) ? mkr : new google.maps.LatLng(46.7834818,23.5464729,12);
+        var mkr = new google.maps.LatLng(46.7718325,23.5839997);
+        var cntr = (mobileTest) ? mkr : new google.maps.LatLng(46.7718325,23.5839997,17);
 
         function init() {
             // Basic options for a simple Google Map
@@ -826,7 +826,7 @@
             var map = new google.maps.Map(mapElement, mapOptions);
 
             // Let's also add a marker while we're at it
-            var image = new google.maps.MarkerImage('../assets/images/map-icon.png',
+            var image = new google.maps.MarkerImage('../assets/images/map-icon.jpg',
                 new google.maps.Size(59, 65),
                 new google.maps.Point(0, 0),
                 new google.maps.Point(24, 42)
@@ -834,11 +834,8 @@
 
             var marker = new google.maps.Marker({
                 position: mkr,
-                icon: image,
+                icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
                 title: 'Titan',
-                infoWindow: {
-                    content: '<p><strong>Rival</strong><br/>121 Somewhere Ave, Suite 123<br/>P: (123) 456-7890<br/>Australia</p>'
-                },
                 map: map,
             });
         }

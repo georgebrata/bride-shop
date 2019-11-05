@@ -43,8 +43,8 @@
 	$email = $_POST['email'];
 	$message = $_POST['message'];
 	$from = $email;
-	$to = 'info@example.com';  // please change this email id
-	$subject = 'Contact Form : Titan - The best downloaded template ever';
+	$to = 'contact@yesido-couture.ro';  // please change this email id
+	$subject = "Mesaj nou de la $name in formularul de contact | yesido-couture.ro/contact";
 
 	$body = "From: $name\n E-Mail: $email\n Message:\n $message";
 
@@ -56,7 +56,7 @@
 	if (mail ($to, $subject, $body, $headers)) {
 		$result .= '<div class="alert alert-success alert-dismissible" role="alert">';
  		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-		$result .= 'Thank You! I will be in touch';
+		$result .= 'Mesajul a fost trimis, multumim!';
 		$result .= '</div>';
 
 		echo $result;
@@ -66,7 +66,7 @@
 	$result = '';
 	$result .= '<div class="alert alert-danger alert-dismissible" role="alert">';
 	$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-	$result .= 'Something bad happend during sending this message. Please try again later';
+	$result .= 'Am intampinat o eroare. Te rugam sa incerci din nou dupa ce reincarci pagina.';
 	$result .= '</div>';
 
 	echo $result;
